@@ -224,7 +224,7 @@ Get-DomainGroup *admin*
 # To get enterprise admins use -Domain <forest_root_domain>
 ```
 
-Get all the members of the Domain Admins group. SID ends with 500-1000 is reserved for the domain. Any created objects will be having SID ends after 1000.
+Get all the members of the Domain Admins group. Security Identifiers (SIDs) that end with numbers from 500 to 1000 are reserved for built-in domain accounts and groups created automatically during domain setup. Any user or group created later will have a SID ending greater than 1000.
 
 ```powershell
 Get-DomainGroupMember -Identity "Domain Admins" -Recurse
